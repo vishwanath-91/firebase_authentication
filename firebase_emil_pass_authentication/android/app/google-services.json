@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "123815349562",
+    "project_id": "email-password-authentic-d02ed",
+    "storage_bucket": "email-password-authentic-d02ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123815349562:android:0a4b9f42e0d8afad8c5403",
+        "android_client_info": {
+          "package_name": "com.example.firebase_emil_pass_authentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1jblwxHbBCAOHU9UsQ36yuAWrnyZA7bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
