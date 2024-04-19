@@ -1,3 +1,4 @@
+import 'package:firebase_emil_pass_authentication/widgets/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -25,8 +26,8 @@ class CustomElevatedButton extends StatelessWidget {
         style: const TextStyle(color: Colors.white),
       ),
       style: const ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(Colors.deepPurpleAccent),
-      ),
+          backgroundColor:
+              MaterialStatePropertyAll(CustomColors.primaryColors)),
     );
   }
 }

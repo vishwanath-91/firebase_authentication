@@ -4,6 +4,7 @@ import 'package:firebase_emil_pass_authentication/provider/auth_provider.dart';
 import 'package:firebase_emil_pass_authentication/screen/auth_screen.dart';
 import 'package:firebase_emil_pass_authentication/screen/email_pass_screen.dart';
 import 'package:firebase_emil_pass_authentication/screen/home_screen.dart';
+import 'package:firebase_emil_pass_authentication/widgets/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -34,9 +35,20 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Firebase Email Password Authentication',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          appBarTheme:
-              const AppBarTheme().copyWith(color: Colors.deepPurpleAccent),
+          colorScheme:
+              ColorScheme.fromSeed(seedColor: CustomColors.primaryColors),
+          appBarTheme: const AppBarTheme().copyWith(
+            color: CustomColors.primaryColors,
+            titleTextStyle: const TextStyle(
+              color: CustomColors.textColor,
+              letterSpacing: 3,
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),
+            iconTheme: const IconThemeData(
+              color: CustomColors.iconColor,
+            ),
+          ),
           useMaterial3: true,
         ),
         onGenerateRoute: (settings) {

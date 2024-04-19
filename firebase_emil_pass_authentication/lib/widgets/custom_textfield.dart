@@ -1,3 +1,4 @@
+import 'package:firebase_emil_pass_authentication/widgets/custom_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -23,7 +24,7 @@ class CustomTextField extends StatelessWidget {
           hintText: hintText,
           prefixIcon: Icon(
             iconData,
-            color: Colors.deepPurpleAccent,
+            color: CustomColors.primaryColors,
           ),
         ),
       ),
