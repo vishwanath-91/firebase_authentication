@@ -1,5 +1,5 @@
-import 'package:firebase_phone_authentication/widgets/custom_elevated_button.dart';
-import 'package:firebase_phone_authentication/widgets/custom_text_widgets.dart';
+import 'package:firebase_phone_authentication/Widgets/custom_elevated_button.dart';
+import 'package:firebase_phone_authentication/Widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
@@ -10,21 +10,27 @@ class PhoneAuthScreen extends StatefulWidget {
 }
 
 class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
+  TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:
-            const CustomTextWidgets(labelText: "Phone Authentication Screen"),
-      ),
+      appBar: AppBar(title:const Text("Phone Authentication"),),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomElevatedButton(
-              onPressed: () {},
-              child: const Text("Phone Authentication"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomTextFormField(
+                controller: controller,
+                labelText: 'phone',
+                hintText: 'Phone Number',
+                prefixIcon: Icons.phone,
+              ),
             ),
+            CustomElevatedButton(onPressed: () {
+
+            }, child:const Text('Submit'),),
           ],
         ),
       ),
