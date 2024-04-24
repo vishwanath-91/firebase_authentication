@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_phone_authentication/Screen/auth_screen.dart';
 import 'package:firebase_phone_authentication/Screen/phone_auth_screen.dart';
 import 'package:firebase_phone_authentication/Utils/keys.dart';
@@ -6,7 +7,13 @@ import 'package:firebase_phone_authentication/utils/custom_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
